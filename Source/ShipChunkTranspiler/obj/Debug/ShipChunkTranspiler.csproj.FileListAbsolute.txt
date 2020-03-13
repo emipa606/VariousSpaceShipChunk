@@ -1,6 +1,0 @@
-E:\Steam\steamapps\common\RimWorld\Mods\VariousSpaceShipChunk\1.1\Assemblies\ShipChunkTranspiler.dll
-E:\Steam\steamapps\common\RimWorld\Mods\VariousSpaceShipChunk\1.1\Assemblies\ShipChunkTranspiler.pdb
-E:\Steam\steamapps\common\RimWorld\Mods\VariousSpaceShipChunk\Source\ShipChunkTranspiler\obj\Debug\ShipChunkTranspiler.csprojAssemblyReference.cache
-E:\Steam\steamapps\common\RimWorld\Mods\VariousSpaceShipChunk\Source\ShipChunkTranspiler\obj\Debug\ShipChunkTranspiler.csproj.CoreCompileInputs.cache
-E:\Steam\steamapps\common\RimWorld\Mods\VariousSpaceShipChunk\Source\ShipChunkTranspiler\obj\Debug\ShipChunkTranspiler.dll
-E:\Steam\steamapps\common\RimWorld\Mods\VariousSpaceShipChunk\Source\ShipChunkTranspiler\obj\Debug\ShipChunkTranspiler.pdb
