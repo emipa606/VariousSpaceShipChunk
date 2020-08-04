@@ -2,7 +2,7 @@
 <ModSyncNinjaData>
   <ID>ec0f7791-7d64-4def-8658-1e87c0d8964e</ID>
   <ModName>Various Space Ship Chunk (Continued)</ModName>
-  <Version>1.0.2.0</Version>
+  <Version>1.0.3.0</Version>
   <SaveBreaking>False</SaveBreaking>
   <Host name="Github">
     <Owner>emipa606</Owner>
@@ -12,7 +12,3 @@
     <Branch>master</Branch>
   </Host>
 </ModSyncNinjaData>
-
-
-
-
