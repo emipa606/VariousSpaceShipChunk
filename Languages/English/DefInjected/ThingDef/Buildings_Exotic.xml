@@ -4,23 +4,50 @@
   <ShipChunk_green.label>ship chunk</ShipChunk_green.label>
   <ShipChunk_green.description>A chunk of a spacecraft. Can be deconstructed to yield useful steel and some components.</ShipChunk_green.description>
 
+  <ShipChunk_green_small.label>small green ship chunk</ShipChunk_green_small.label>
+  <ShipChunk_green_small.description>A small green chunk of a spacecraft. Can be deconstructed to yield useful steel and some components.</ShipChunk_green_small.description>
+
   <ShipChunk_greenI.label>ship chunk</ShipChunk_greenI.label>
   <ShipChunk_greenI.description>A chunk of a spacecraft. Can be deconstructed to yield useful steel and some components.</ShipChunk_greenI.description>
+
+  <ShipChunk_greenI_small.label>small green ship chunk</ShipChunk_greenI_small.label>
+  <ShipChunk_greenI_small.description>A small green chunk of a spacecraft. Can be deconstructed to yield useful steel and components.</ShipChunk_greenI_small.description>
 
   <ShipChunk_yellow.label>yellow ship chunk</ShipChunk_yellow.label>
   <ShipChunk_yellow.description>A chunk of a spacecraft. Can be deconstructed to yield useful steel, gold and components.</ShipChunk_yellow.description>
 
+  <ShipChunk_yellow_small.label>small yellow ship chunk</ShipChunk_yellow_small.label>
+  <ShipChunk_yellow_small.description>A small yellow chunk of a spacecraft. Can be deconstructed to yield useful steel, gold and some components.</ShipChunk_yellow_small.description>
+
   <ShipChunk_blue.label>blue ship chunk</ShipChunk_blue.label>
   <ShipChunk_blue.description>A chunk of a spacecraft. Can be deconstructed to yield useful steel, plasteel and components.</ShipChunk_blue.description>
+
+  <ShipChunk_blue_small.label>small blue ship chunk</ShipChunk_blue_small.label>
+  <ShipChunk_blue_small.description>A small blue chunk of a spacecraft. Can be deconstructed to yield useful steel, plasteel and some components.</ShipChunk_blue_small.description>
 
   <ShipChunk_gray.label>gray ship chunk</ShipChunk_gray.label>
   <ShipChunk_gray.description>A chunk of a spacecraft. Can be deconstructed to yield precious silver and components.</ShipChunk_gray.description>
 
+  <ShipChunk_gray_small.label>small gray ship chunk</ShipChunk_gray_small.label>
+  <ShipChunk_gray_small.description>A small gray chunk of a spacecraft. Can be deconstructed to yield useful steel, silver and some components.</ShipChunk_gray_small.description>
+
   <ShipChunk_grayI.label>gray ship chunk</ShipChunk_grayI.label>
   <ShipChunk_grayI.description>A chunk of a spacecraft. Can be deconstructed to yield precious silver and components.</ShipChunk_grayI.description>
 
+  <ShipChunk_grayI_small.label>small gray ship chunk</ShipChunk_grayI_small.label>
+  <ShipChunk_grayI_small.description>A small gray chunk of a spacecraft. Can be deconstructed to yield useful steel, silver and some components.</ShipChunk_grayI_small.description>
+
   <ShipChunk_purple.label>purple ship chunk</ShipChunk_purple.label>
   <ShipChunk_purple.description>A chunk of a spacecraft. Can be deconstructed to yield many useful materials.</ShipChunk_purple.description>
+
+  <ShipChunk_purple_small.label>small purple ship chunk</ShipChunk_purple_small.label>
+  <ShipChunk_purple_small.description>A small purple chunk of a spacecraft. Can be deconstructed to yield useful steel, silver, gold and some components.</ShipChunk_purple_small.description>
+
+  <ShipChunk_black.label>black ship chunk</ShipChunk_black.label>
+  <ShipChunk_black.description>A black chunk of a spacecraft. Can be deconstructed to yield useful steel, uranium and some components.</ShipChunk_black.description>
+
+  <ShipChunk_black_small.label>small black ship chunk</ShipChunk_black_small.label>
+  <ShipChunk_black_small.description>A small black chunk of a spacecraft. Can be deconstructed to yield useful steel, uranium and some components.</ShipChunk_black_small.description>
 
 
 </LanguageData>

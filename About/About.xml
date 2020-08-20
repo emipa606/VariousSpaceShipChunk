@@ -20,7 +20,7 @@
   <loadAfter>
     <li>brrainz.harmony</li>
   </loadAfter>
-  <description>Update of totobrother mod for RimWorld 1.1
+  <description>Update of totobrother mod
 https://steamcommunity.com/sharedfiles/filedetails/?id=1158568885
 
 Support-chat:
@@ -28,6 +28,9 @@ https://discord.gg/SuhwVpM
 
 Non-steam version:
 https://github.com/emipa606/VariousSpaceShipChunk
+
+- Added option to use small debris as well
+- Added a black chunk that has some uranium
 	
 --- Original Description ---
 It adds various kind of Ship Chunks

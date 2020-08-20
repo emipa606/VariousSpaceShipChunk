@@ -3,24 +3,31 @@
   <ThingDef Name="ShipChunk_Base" Abstract="True">
     <category>Building</category>
     <thingClass>Building</thingClass>
+    <altitudeLayer>Building</altitudeLayer>
+    <pathCost>35</pathCost>
+    <blockWind>true</blockWind>
+    <passability>PassThroughOnly</passability>
+    <fillPercent>0.50</fillPercent>
+    <killedLeavings>
+      <ChunkSlagSteel>2</ChunkSlagSteel>
+    </killedLeavings>
+    <building>
+      <claimable>false</claimable>
+      <alwaysDeconstructible>true</alwaysDeconstructible>
+    </building>
     <soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
     <selectable>true</selectable>
-    <drawerType>MapMeshAndRealTime</drawerType>
+    <drawerType>MapMeshOnly</drawerType>
     <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
-    <repairEffect>Repair</repairEffect>
+    <repairEffect>ConstructMetal</repairEffect>
     <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
     <filthLeaving>Filth_RubbleBuilding</filthLeaving>
     <statBases>
       <SellPriceFactor>0.70</SellPriceFactor>
     </statBases>
   </ThingDef>
-  <ThingDef ParentName="ShipChunk_Base">
-    <defName>ShipChunk_green</defName>
-    <label>ship chunk</label>
-    <description>A chunk of a spacecraft. Can be deconstructed to yield useful steel and some components.</description>
-    <category>Building</category>
+  <ThingDef ParentName="ShipChunk_Base" Name="LargeShipChunkBase" Abstract="True">
     <graphicData>
-      <texPath>Building/ShipChunk_green</texPath>
       <graphicClass>Graphic_Random</graphicClass>
       <drawSize>(2,2)</drawSize>
       <damageData>
@@ -31,11 +38,6 @@
         <offset>(0,0,-0.13)</offset>
       </shadowData>
     </graphicData>
-    <altitudeLayer>Building</altitudeLayer>
-    <pathCost>35</pathCost>
-    <blockWind>true</blockWind>
-    <passability>PassThroughOnly</passability>
-    <fillPercent>0.50</fillPercent>
     <size>(2,2)</size>
     <statBases>
       <MaxHitPoints>300</MaxHitPoints>
@@ -43,303 +45,231 @@
       <Beauty>-20</Beauty>
       <WorkToBuild>12000</WorkToBuild>
     </statBases>
-    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
-    <killedLeavings>
-      <ChunkSlagSteel>2</ChunkSlagSteel>
-    </killedLeavings>
+  </ThingDef>
+  <ThingDef ParentName="ShipChunk_Base" Name="SmallShipChunkBase" Abstract="True">
+    <graphicData>
+      <graphicClass>Graphic_Random</graphicClass>
+      <drawSize>(1,1)</drawSize>
+      <damageData>
+        <rect>(0.1,0.1,0.9,0.9)</rect>
+      </damageData>
+      <shadowData>
+        <volume>(0.8,0.25,0.75)</volume>
+        <offset>(0,0,-0.065)</offset>
+      </shadowData>
+    </graphicData>
+    <size>(1,1)</size>
+    <statBases>
+      <MaxHitPoints>150</MaxHitPoints>
+      <Flammability>0</Flammability>
+      <Beauty>-20</Beauty>
+      <WorkToBuild>6000</WorkToBuild>
+    </statBases>
+  </ThingDef>
+  <ThingDef ParentName="LargeShipChunkBase">
+    <defName>ShipChunk_green</defName>
+    <label>green ship chunk</label>
+    <description>A green chunk of a spacecraft. Can be deconstructed to yield useful steel and some components.</description>
+    <graphicData>
+      <texPath>Building/ShipChunk_green</texPath>
+    </graphicData>
     <costList>
       <ComponentIndustrial>5</ComponentIndustrial>
       <Steel>200</Steel>
     </costList>
-    <building>
-      <claimable>false</claimable>
-      <alwaysDeconstructible>true</alwaysDeconstructible>
-    </building>
-    <selectable>true</selectable>
-    <soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
-    <drawerType>MapMeshOnly</drawerType>
-    <repairEffect>ConstructMetal</repairEffect>
   </ThingDef>
-  <ThingDef ParentName="ShipChunk_Base">
-    <defName>ShipChunk_greenI</defName>
-    <label>ship chunk</label>
-    <description>A chunk of a spacecraft. Can be deconstructed to yield useful steel and some components.</description>
-    <category>Building</category>
+  <ThingDef ParentName="SmallShipChunkBase">
+    <defName>ShipChunk_green_small</defName>
+    <label>small green ship chunk</label>
+    <description>A small green chunk of a spacecraft. Can be deconstructed to yield useful steel and some components.</description>
     <graphicData>
       <texPath>Building/ShipChunk_green</texPath>
-      <graphicClass>Graphic_Random</graphicClass>
-      <drawSize>(2,2)</drawSize>
-      <damageData>
-        <rect>(0.1,0.1,1.8,1.8)</rect>
-      </damageData>
-      <shadowData>
-        <volume>(1.6,0.5,1.25)</volume>
-        <offset>(0,0,-0.13)</offset>
-      </shadowData>
     </graphicData>
-    <altitudeLayer>Building</altitudeLayer>
-    <pathCost>35</pathCost>
-    <blockWind>true</blockWind>
-    <passability>PassThroughOnly</passability>
-    <fillPercent>0.50</fillPercent>
-    <size>(2,2)</size>
-    <statBases>
-      <MaxHitPoints>300</MaxHitPoints>
-      <Flammability>0</Flammability>
-      <Beauty>-20</Beauty>
-      <WorkToBuild>12000</WorkToBuild>
-    </statBases>
-    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
-    <killedLeavings>
-      <ChunkSlagSteel>2</ChunkSlagSteel>
-    </killedLeavings>
+    <costList>
+      <ComponentIndustrial>2</ComponentIndustrial>
+      <Steel>100</Steel>
+    </costList>
+  </ThingDef>
+  <ThingDef ParentName="LargeShipChunkBase">
+    <defName>ShipChunk_greenI</defName>
+    <label>green ship chunk</label>
+    <description>A green chunk of a spacecraft. Can be deconstructed to yield useful steel and components.</description>
+    <graphicData>
+      <texPath>Building/ShipChunk_green</texPath>
+    </graphicData>
     <costList>
       <ComponentIndustrial>8</ComponentIndustrial>
       <Steel>300</Steel>
     </costList>
-    <building>
-      <claimable>false</claimable>
-      <alwaysDeconstructible>true</alwaysDeconstructible>
-    </building>
-    <selectable>true</selectable>
-    <soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
-    <drawerType>MapMeshOnly</drawerType>
-    <repairEffect>ConstructMetal</repairEffect>
   </ThingDef>
-  <ThingDef ParentName="ShipChunk_Base">
+  <ThingDef ParentName="SmallShipChunkBase">
+    <defName>ShipChunk_greenI_small</defName>
+    <label>small green ship chunk</label>
+    <description>A small green chunk of a spacecraft. Can be deconstructed to yield useful steel and components.</description>
+    <graphicData>
+      <texPath>Building/ShipChunk_green</texPath>
+    </graphicData>
+    <costList>
+      <ComponentIndustrial>4</ComponentIndustrial>
+      <Steel>150</Steel>
+    </costList>
+  </ThingDef>
+  <ThingDef ParentName="LargeShipChunkBase">
     <defName>ShipChunk_yellow</defName>
     <label>yellow ship chunk</label>
-    <description>A chunk of a spacecraft. Can be deconstructed to yield useful steel, gold and components.</description>
-    <category>Building</category>
+    <description>A yellow chunk of a spacecraft. Can be deconstructed to yield useful steel, gold and some components.</description>
     <graphicData>
       <texPath>Building/ShipChunk_yellow</texPath>
-      <graphicClass>Graphic_Random</graphicClass>
-      <drawSize>(2,2)</drawSize>
-      <damageData>
-        <rect>(0.1,0.1,1.8,1.8)</rect>
-      </damageData>
-      <shadowData>
-        <volume>(1.6,0.5,1.25)</volume>
-        <offset>(0,0,-0.13)</offset>
-      </shadowData>
     </graphicData>
-    <altitudeLayer>Building</altitudeLayer>
-    <pathCost>35</pathCost>
-    <blockWind>true</blockWind>
-    <passability>PassThroughOnly</passability>
-    <fillPercent>0.50</fillPercent>
-    <size>(2,2)</size>
-    <statBases>
-      <MaxHitPoints>300</MaxHitPoints>
-      <Flammability>0</Flammability>
-      <Beauty>-20</Beauty>
-      <WorkToBuild>12000</WorkToBuild>
-    </statBases>
-    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
-    <killedLeavings>
-      <ChunkSlagSteel>2</ChunkSlagSteel>
-    </killedLeavings>
     <costList>
       <ComponentIndustrial>6</ComponentIndustrial>
       <Gold>30</Gold>
       <Steel>60</Steel>
     </costList>
-    <building>
-      <claimable>false</claimable>
-      <alwaysDeconstructible>true</alwaysDeconstructible>
-    </building>
-    <selectable>true</selectable>
-    <soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
-    <drawerType>MapMeshOnly</drawerType>
-    <repairEffect>ConstructMetal</repairEffect>
   </ThingDef>
-  <ThingDef ParentName="ShipChunk_Base">
+  <ThingDef ParentName="SmallShipChunkBase">
+    <defName>ShipChunk_yellow_small</defName>
+    <label>small yellow ship chunk</label>
+    <description>A small yellow chunk of a spacecraft. Can be deconstructed to yield useful steel, gold and some components.</description>
+    <graphicData>
+      <texPath>Building/ShipChunk_yellow</texPath>
+    </graphicData>
+    <costList>
+      <ComponentIndustrial>3</ComponentIndustrial>
+      <Gold>15</Gold>
+      <Steel>30</Steel>
+    </costList>
+  </ThingDef>
+  <ThingDef ParentName="LargeShipChunkBase">
     <defName>ShipChunk_blue</defName>
     <label>blue ship chunk</label>
-    <description>A chunk of a spacecraft. Can be deconstructed to yield useful steel, plasteel and components.</description>
-    <category>Building</category>
+    <description>A blue chunk of a spacecraft. Can be deconstructed to yield useful steel, plasteel and some components.</description>
     <graphicData>
       <texPath>Building/ShipChunk_blue</texPath>
-      <graphicClass>Graphic_Random</graphicClass>
-      <drawSize>(2,2)</drawSize>
-      <damageData>
-        <rect>(0.1,0.1,1.8,1.8)</rect>
-      </damageData>
-      <shadowData>
-        <volume>(1.6,0.5,1.25)</volume>
-        <offset>(0,0,-0.13)</offset>
-      </shadowData>
     </graphicData>
-    <altitudeLayer>Building</altitudeLayer>
-    <pathCost>35</pathCost>
-    <blockWind>true</blockWind>
-    <passability>PassThroughOnly</passability>
-    <fillPercent>0.50</fillPercent>
-    <size>(2,2)</size>
-    <statBases>
-      <MaxHitPoints>300</MaxHitPoints>
-      <Flammability>0</Flammability>
-      <Beauty>-20</Beauty>
-      <WorkToBuild>12000</WorkToBuild>
-    </statBases>
-    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
-    <killedLeavings>
-      <ChunkSlagSteel>2</ChunkSlagSteel>
-    </killedLeavings>
     <costList>
       <ComponentIndustrial>8</ComponentIndustrial>
       <Steel>53</Steel>
       <Plasteel>80</Plasteel>
     </costList>
-    <building>
-      <claimable>false</claimable>
-      <alwaysDeconstructible>true</alwaysDeconstructible>
-    </building>
-    <selectable>true</selectable>
-    <soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
-    <drawerType>MapMeshOnly</drawerType>
-    <repairEffect>ConstructMetal</repairEffect>
   </ThingDef>
-  <ThingDef ParentName="ShipChunk_Base">
+  <ThingDef ParentName="SmallShipChunkBase">
+    <defName>ShipChunk_blue_small</defName>
+    <label>small blue ship chunk</label>
+    <description>A small blue chunk of a spacecraft. Can be deconstructed to yield useful steel, plasteel and some components.</description>
+    <graphicData>
+      <texPath>Building/ShipChunk_blue</texPath>
+    </graphicData>
+    <costList>
+      <ComponentIndustrial>4</ComponentIndustrial>
+      <Steel>26</Steel>
+      <Plasteel>40</Plasteel>
+    </costList>
+  </ThingDef>
+  <ThingDef ParentName="LargeShipChunkBase">
     <defName>ShipChunk_gray</defName>
     <label>gray ship chunk</label>
-    <description>A chunk of a spacecraft. Can be deconstructed to yield precious silver and components.</description>
-    <category>Building</category>
+    <description>A gray chunk of a spacecraft. Can be deconstructed to yield useful steel, silver and some components.</description>
     <graphicData>
       <texPath>Building/ShipChunk_gray</texPath>
-      <graphicClass>Graphic_Random</graphicClass>
-      <drawSize>(2,2)</drawSize>
-      <damageData>
-        <rect>(0.1,0.1,1.8,1.8)</rect>
-      </damageData>
-      <shadowData>
-        <volume>(1.6,0.5,1.25)</volume>
-        <offset>(0,0,-0.13)</offset>
-      </shadowData>
     </graphicData>
-    <altitudeLayer>Building</altitudeLayer>
-    <pathCost>35</pathCost>
-    <blockWind>true</blockWind>
-    <passability>PassThroughOnly</passability>
-    <fillPercent>0.50</fillPercent>
-    <size>(2,2)</size>
-    <statBases>
-      <MaxHitPoints>300</MaxHitPoints>
-      <Flammability>0</Flammability>
-      <Beauty>-20</Beauty>
-      <WorkToBuild>12000</WorkToBuild>
-    </statBases>
-    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
-    <killedLeavings>
-      <ChunkSlagSteel>2</ChunkSlagSteel>
-    </killedLeavings>
     <costList>
       <ComponentIndustrial>6</ComponentIndustrial>
       <Steel>53</Steel>
       <Silver>200</Silver>
     </costList>
-    <building>
-      <claimable>false</claimable>
-      <alwaysDeconstructible>true</alwaysDeconstructible>
-    </building>
-    <selectable>true</selectable>
-    <soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
-    <drawerType>MapMeshOnly</drawerType>
-    <repairEffect>ConstructMetal</repairEffect>
   </ThingDef>
-  <ThingDef ParentName="ShipChunk_Base">
-    <defName>ShipChunk_grayI</defName>
-    <label>gray ship chunk</label>
-    <description>A chunk of a spacecraft. Can be deconstructed to yield precious silver and components.</description>
-    <category>Building</category>
+  <ThingDef ParentName="SmallShipChunkBase">
+    <defName>ShipChunk_gray_small</defName>
+    <label>small gray ship chunk</label>
+    <description>A small gray chunk of a spacecraft. Can be deconstructed to yield useful steel, silver and some components.</description>
     <graphicData>
       <texPath>Building/ShipChunk_gray</texPath>
-      <graphicClass>Graphic_Random</graphicClass>
-      <drawSize>(2,2)</drawSize>
-      <damageData>
-        <rect>(0.1,0.1,1.8,1.8)</rect>
-      </damageData>
-      <shadowData>
-        <volume>(1.6,0.5,1.25)</volume>
-        <offset>(0,0,-0.13)</offset>
-      </shadowData>
     </graphicData>
-    <altitudeLayer>Building</altitudeLayer>
-    <pathCost>35</pathCost>
-    <blockWind>true</blockWind>
-    <passability>PassThroughOnly</passability>
-    <fillPercent>0.50</fillPercent>
-    <size>(2,2)</size>
-    <statBases>
-      <MaxHitPoints>300</MaxHitPoints>
-      <Flammability>0</Flammability>
-      <Beauty>-20</Beauty>
-      <WorkToBuild>12000</WorkToBuild>
-    </statBases>
-    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
-    <killedLeavings>
-      <ChunkSlagSteel>2</ChunkSlagSteel>
-    </killedLeavings>
+    <costList>
+      <ComponentIndustrial>3</ComponentIndustrial>
+      <Steel>26</Steel>
+      <Silver>100</Silver>
+    </costList>
+  </ThingDef>
+  <ThingDef ParentName="LargeShipChunkBase">
+    <defName>ShipChunk_grayI</defName>
+    <label>gray ship chunk</label>
+    <description>A gray chunk of a spacecraft. Can be deconstructed to yield useful steel, silver and some components.</description>
+    <graphicData>
+      <texPath>Building/ShipChunk_gray</texPath>
+    </graphicData>
     <costList>
       <ComponentIndustrial>6</ComponentIndustrial>
       <Steel>60</Steel>
       <Silver>300</Silver>
     </costList>
-    <building>
-      <claimable>false</claimable>
-      <alwaysDeconstructible>true</alwaysDeconstructible>
-    </building>
-    <selectable>true</selectable>
-    <soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
-    <drawerType>MapMeshOnly</drawerType>
-    <repairEffect>ConstructMetal</repairEffect>
   </ThingDef>
-  <ThingDef ParentName="ShipChunk_Base">
+  <ThingDef ParentName="SmallShipChunkBase">
+    <defName>ShipChunk_grayI_small</defName>
+    <label>small gray ship chunk</label>
+    <description>A small gray chunk of a spacecraft. Can be deconstructed to yield useful steel, silver and some components.</description>
+    <graphicData>
+      <texPath>Building/ShipChunk_gray</texPath>
+    </graphicData>
+    <costList>
+      <ComponentIndustrial>3</ComponentIndustrial>
+      <Steel>30</Steel>
+      <Silver>150</Silver>
+    </costList>
+  </ThingDef>
+  <ThingDef ParentName="LargeShipChunkBase">
     <defName>ShipChunk_purple</defName>
     <label>purple ship chunk</label>
-    <description>A chunk of a spacecraft. Can be deconstructed to yield many useful materials.</description>
-    <category>Building</category>
+    <description>A purple chunk of a spacecraft. Can be deconstructed to yield useful steel, silver, gold and some components.</description>
     <graphicData>
       <texPath>Building/ShipChunk_purple</texPath>
-      <graphicClass>Graphic_Random</graphicClass>
-      <drawSize>(2,2)</drawSize>
-      <damageData>
-        <rect>(0.1,0.1,1.8,1.8)</rect>
-      </damageData>
-      <shadowData>
-        <volume>(1.6,0.5,1.25)</volume>
-        <offset>(0,0,-0.13)</offset>
-      </shadowData>
     </graphicData>
-    <altitudeLayer>Building</altitudeLayer>
-    <pathCost>35</pathCost>
-    <blockWind>true</blockWind>
-    <passability>PassThroughOnly</passability>
-    <fillPercent>0.50</fillPercent>
-    <size>(2,2)</size>
-    <statBases>
-      <MaxHitPoints>300</MaxHitPoints>
-      <Flammability>0</Flammability>
-      <Beauty>-20</Beauty>
-      <WorkToBuild>12000</WorkToBuild>
-    </statBases>
-    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
-    <killedLeavings>
-      <ChunkSlagSteel>2</ChunkSlagSteel>
-    </killedLeavings>
     <costList>
       <ComponentIndustrial>8</ComponentIndustrial>
       <Steel>280</Steel>
       <Silver>200</Silver>
       <Gold>40</Gold>
     </costList>
-    <building>
-      <claimable>false</claimable>
-      <alwaysDeconstructible>true</alwaysDeconstructible>
-    </building>
-    <selectable>true</selectable>
-    <soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
-    <drawerType>MapMeshOnly</drawerType>
-    <repairEffect>ConstructMetal</repairEffect>
+  </ThingDef>
+  <ThingDef ParentName="SmallShipChunkBase">
+    <defName>ShipChunk_purple_small</defName>
+    <label>small purple ship chunk</label>
+    <description>A small purple chunk of a spacecraft. Can be deconstructed to yield useful steel, silver, gold and some components.</description>
+    <graphicData>
+      <texPath>Building/ShipChunk_purple</texPath>
+    </graphicData>
+    <costList>
+      <ComponentIndustrial>4</ComponentIndustrial>
+      <Steel>140</Steel>
+      <Silver>100</Silver>
+      <Gold>20</Gold>
+    </costList>
+  </ThingDef>
+  <ThingDef ParentName="LargeShipChunkBase">
+    <defName>ShipChunk_black</defName>
+    <label>black ship chunk</label>
+    <description>A black chunk of a spacecraft. Can be deconstructed to yield useful steel, uranium and some components.</description>
+    <graphicData>
+      <texPath>Building/ShipChunk_black</texPath>
+    </graphicData>
+    <costList>
+      <ComponentIndustrial>6</ComponentIndustrial>
+      <Steel>200</Steel>
+      <Uranium>50</Uranium>
+    </costList>
+  </ThingDef>
+  <ThingDef ParentName="SmallShipChunkBase">
+    <defName>ShipChunk_black_small</defName>
+    <label>small black ship chunk</label>
+    <description>A small black chunk of a spacecraft. Can be deconstructed to yield useful steel, uranium and some components.</description>
+    <graphicData>
+      <texPath>Building/ShipChunk_black</texPath>
+    </graphicData>
+    <costList>
+      <ComponentIndustrial>3</ComponentIndustrial>
+      <Steel>100</Steel>
+      <Uranium>25</Uranium>
+    </costList>
   </ThingDef>
 </Defs>
