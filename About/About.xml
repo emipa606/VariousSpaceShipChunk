@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
   <name>Various Space Ship Chunk (Continued)</name>
   <packageId>Mlie.VariousSpaceShipChunk</packageId>
@@ -21,14 +21,14 @@
   <loadAfter>
     <li>brrainz.harmony</li>
   </loadAfter>
-  <description>[img]https://i.imgur.com/WAEzk68.png[/img]
+  <description>[img]https://i.imgur.com/buuPQel.png[/img]
 Update of totobrother mod
 https://steamcommunity.com/sharedfiles/filedetails/?id=1158568885
 
 - Added a chunk that gives uranium
 - There is an option to spawn smaller chunks as well
 
-[img]https://i.imgur.com/7Gzt3Rg.png[/img]
+[img]https://i.imgur.com/pufA0kM.png[/img]
 
 [table]
 	[tr]
@@ -37,7 +37,7 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=1158568885
 	[/tr]
 [/table]
 	
-[img]https://i.imgur.com/NOW7jU1.png[/img]
+[img]https://i.imgur.com/Z4GOv8H.png[/img]
 
 It adds various kind of Ship Chunks
 Also, These are can show when ship chunk drop event!!
@@ -47,7 +47,7 @@ Here is detail information : http://totobrothers.blogspot.kr/2017/11/steam-works
 
 A17 : https://totobrothers.blogspot.kr/2017/11/steam-workshop-httpsteamcommunity.html
 
-@It can be added any save file. Don&apos;t worry about that. &lt;- Thx to Mehni for making great code!
+@It can be added any save file. Don't worry about that. - Thx to Mehni for making great code!
 Also, The ship chunks currently do not spawn modded materials. They only contain metals you can find in vanilla.
 
 Main code : Handsome Mehni
@@ -59,14 +59,14 @@ http://steamcommunity.com/sharedfiles/filedetails/?id=1160627004
 
 And If you enjoy this mod, Plz try my other mods
 
-Tobe&apos;s Realistic farming.
+Tobe's Realistic farming.
  https://steamcommunity.com/workshop/filedetails/?id=1136426568
 
 Cute Penguin.
  https://steamcommunity.com/sharedfiles/filedetails/?id=1161150015
 
 
-[img]https://i.imgur.com/Rs6T6cr.png[/img]
+[img]https://i.imgur.com/PwoNOj4.png[/img]
 [list]
 [*] See if the the error persists if you just have this mod and its requirements active.
 [*] If not, try adding your other mods until it happens again.
@@ -77,4 +77,3 @@ Cute Penguin.
 [/list]
 </description>
 </ModMetaData>
-

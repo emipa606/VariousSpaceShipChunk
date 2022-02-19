@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-  <HugsLib.UpdateFeatureDef Abstract="true" Name="UpdateFeatureBase">
+  <HugsLib.UpdateFeatureDef Abstract="true" Name="VariousSpaceShipChunk_UpdateFeatureBase">
     <modNameReadable>VariousSpaceShipChunk</modNameReadable>
     <linkUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=2014616487</linkUrl>
   </HugsLib.UpdateFeatureDef>
-  <HugsLib.UpdateFeatureDef ParentName="UpdateFeatureBase">
+  <HugsLib.UpdateFeatureDef ParentName="VariousSpaceShipChunk_UpdateFeatureBase">
     <defName>VariousSpaceShipChunk_1_0_4_0</defName>
     <assemblyVersion>1.0.4.0</assemblyVersion>
     <content>It is now possible to add smaller debris to the Space Ship Chunk-event. This feature should add some more variety to the event. These smaller chunks have less material but are of the same kind as the bigger ones.

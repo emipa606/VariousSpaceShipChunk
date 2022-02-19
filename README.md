@@ -1,6 +1,6 @@
 # VariousSpaceShipChunk
 
-![Image](https://i.imgur.com/WAEzk68.png)
+![Image](https://i.imgur.com/buuPQel.png)
 
 Update of totobrother mod
 https://steamcommunity.com/sharedfiles/filedetails/?id=1158568885
@@ -8,19 +8,10 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=1158568885
 - Added a chunk that gives uranium
 - There is an option to spawn smaller chunks as well
 
-![Image](https://i.imgur.com/7Gzt3Rg.png)
+![Image](https://i.imgur.com/pufA0kM.png)
 
-
-[table]
-	[tr]
-		[td]https://invite.gg/Mlie]![Image](https://i.imgur.com/zdzzBrc.png)
-[/td]
-		[td]https://github.com/emipa606/VariousSpaceShipChunk]![Image](https://i.imgur.com/kTkpTOE.png)
-[/td]
-	[/tr]
-[/table]
 	
-![Image](https://i.imgur.com/NOW7jU1.png)
+![Image](https://i.imgur.com/Z4GOv8H.png)
 
 
 It adds various kind of Ship Chunks
@@ -31,7 +22,7 @@ Here is detail information : http://totobrothers.blogspot.kr/2017/11/steam-works
 
 A17 : https://totobrothers.blogspot.kr/2017/11/steam-workshop-httpsteamcommunity.html
 
-@It can be added any save file. Don&apos;t worry about that. &lt;- Thx to Mehni for making great code!
+@It can be added any save file. Don't worry about that. - Thx to Mehni for making great code!
 Also, The ship chunks currently do not spawn modded materials. They only contain metals you can find in vanilla.
 
 Main code : Handsome Mehni
@@ -43,14 +34,14 @@ http://steamcommunity.com/sharedfiles/filedetails/?id=1160627004
 
 And If you enjoy this mod, Plz try my other mods
 
-Tobe&apos;s Realistic farming.
+Tobe's Realistic farming.
  https://steamcommunity.com/workshop/filedetails/?id=1136426568
 
 Cute Penguin.
  https://steamcommunity.com/sharedfiles/filedetails/?id=1161150015
 
 
-![Image](https://i.imgur.com/Rs6T6cr.png)
+![Image](https://i.imgur.com/PwoNOj4.png)
 
 
 
