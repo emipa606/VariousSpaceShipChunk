@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <VSSC.SmallChunksAlso>Also use small chunks in event</VSSC.SmallChunksAlso>
+  <VSSC.SmallChunksAlso.Tooltip>Adds a smaller chunk as possible debris</VSSC.SmallChunksAlso.Tooltip>
+  <VSSC.CurrentModVersion>Installed mod-version: {0}</VSSC.CurrentModVersion>
+</LanguageData>
