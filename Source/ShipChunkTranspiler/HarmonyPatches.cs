@@ -14,13 +14,13 @@ internal static class HarmonyPatches
     {
         new Harmony("mehni.rimworld.shipchunks.main").Patch(
             AccessTools.Method(typeof(IncidentWorker_ShipChunkDrop), "SpawnChunk"), null, null,
-            new HarmonyMethod(typeof(HarmonyPatches), "IncidentWorker_ShipChunkDrop_SpawnChunk_Transpiler"));
+            new HarmonyMethod(typeof(HarmonyPatches), nameof(IncidentWorker_ShipChunkDrop_SpawnChunk_Transpiler)));
     }
 
     public static IEnumerable<CodeInstruction> IncidentWorker_ShipChunkDrop_SpawnChunk_Transpiler(
         IEnumerable<CodeInstruction> instructions)
     {
-        var chunkSelector = AccessTools.Method(typeof(HarmonyPatches), "SelectChunkFromAvailableOptions");
+        var chunkSelector = AccessTools.Method(typeof(HarmonyPatches), nameof(SelectChunkFromAvailableOptions));
         var i = 0;
         foreach (var codeInstruction in instructions)
         {
@@ -42,8 +42,7 @@ internal static class HarmonyPatches
 
     public static ThingDef SelectChunkFromAvailableOptions()
     {
-        if (LoadedModManager.GetMod<ShipChunkDrop_TranspilerMod>().GetSettings<ShipChunkDrop_TranspilerSettings>()
-            .SmallChunksAlso)
+        if (ShipChunkDrop_TranspilerMod.instance.Settings.SmallChunksAlso)
         {
             return (from defs in DefDatabase<ThingDef>.AllDefs
                 where defs.defName.StartsWith("ShipChunk") && !defs.defName.Contains("Incoming")
