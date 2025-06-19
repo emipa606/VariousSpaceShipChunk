@@ -10,7 +10,7 @@ internal class ShipChunkDrop_TranspilerMod : Mod
     /// <summary>
     ///     The instance of the settings to be read by the mod
     /// </summary>
-    public static ShipChunkDrop_TranspilerMod instance;
+    public static ShipChunkDrop_TranspilerMod Instance;
 
     private static string currentVersion;
 
@@ -25,7 +25,7 @@ internal class ShipChunkDrop_TranspilerMod : Mod
     /// <param name="content"></param>
     public ShipChunkDrop_TranspilerMod(ModContentPack content) : base(content)
     {
-        instance = this;
+        Instance = this;
         currentVersion =
             VersionFromManifest.GetVersionFromModMetaData(content.ModMetaData);
     }
@@ -37,14 +37,10 @@ internal class ShipChunkDrop_TranspilerMod : Mod
     {
         get
         {
-            if (settings == null)
-            {
-                settings = GetSettings<ShipChunkDrop_TranspilerSettings>();
-            }
+            settings ??= GetSettings<ShipChunkDrop_TranspilerSettings>();
 
             return settings;
         }
-        set => settings = value;
     }
 
     /// <summary>

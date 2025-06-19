@@ -1,0 +1,42 @@
+ManifestFileVersion: 0
+CRC: 3072229619
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 78e7d226d648c1318aa5fe9299c92e10
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 2612ac43db082a73502ee80f2eceb73f
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: 78e7d226d648c1318aa5fe9299c92e10
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Data/Mlie.VariousSpaceShipChunk/Textures/Building/ShipChunk_purple/1.png
+- Assets/Data/Mlie.VariousSpaceShipChunk/Textures/Building/ShipChunk_purple/7.png
+- Assets/Data/Mlie.VariousSpaceShipChunk/Textures/Building/ShipChunk_black/8.png
+- Assets/Data/Mlie.VariousSpaceShipChunk/Textures/Building/ShipChunk_black/10.png
+- Assets/Data/Mlie.VariousSpaceShipChunk/Textures/Building/ShipChunk_purple/2.png
+- Assets/Data/Mlie.VariousSpaceShipChunk/Textures/Building/ShipChunk_yellow/10.png
+- Assets/Data/Mlie.VariousSpaceShipChunk/Textures/Building/ShipChunk_blue/5.png
+- Assets/Data/Mlie.VariousSpaceShipChunk/Textures/Building/ShipChunk_blue/11.png
+- Assets/Data/Mlie.VariousSpaceShipChunk/Textures/Building/ShipChunk_green/7.png
+- Assets/Data/Mlie.VariousSpaceShipChunk/Textures/Building/ShipChunk_blue/3.png
+- Assets/Data/Mlie.VariousSpaceShipChunk/Textures/Building/ShipChunk_blue/7.png
+- Assets/Data/Mlie.VariousSpaceShipChunk/Textures/Building/ShipChunk_green/4.png
+- Assets/Data/Mlie.VariousSpaceShipChunk/Textures/Building/ShipChunk_yellow/9.png
+- Assets/Data/Mlie.VariousSpaceShipChunk/Textures/Building/ShipChunk_green/2.png
+- Assets/Data/Mlie.VariousSpaceShipChunk/Textures/Building/ShipChunk_yellow/8.png
+- Assets/Data/Mlie.VariousSpaceShipChunk/Textures/Building/ShipChunk_gray/12.png
+- Assets/Data/Mlie.VariousSpaceShipChunk/Textures/Building/ShipChunk_purple/6.png
+- Assets/Data/Mlie.VariousSpaceShipChunk/Textures/Building/ShipChunk_black/9.png
+- Assets/Data/Mlie.VariousSpaceShipChunk/Textures/Building/ShipChunk_green/3.png
+- Assets/Data/Mlie.VariousSpaceShipChunk/Textures/Building/ShipChunk_green/1.png
+- Assets/Data/Mlie.VariousSpaceShipChunk/Textures/Building/ShipChunk_green/5.png
+- Assets/Data/Mlie.VariousSpaceShipChunk/Textures/Building/ShipChunk_gray/1.png
+- Assets/Data/Mlie.VariousSpaceShipChunk/Textures/Building/ShipChunk_green/6.png
+Dependencies: []

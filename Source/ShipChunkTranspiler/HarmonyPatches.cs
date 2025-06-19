@@ -42,7 +42,7 @@ internal static class HarmonyPatches
 
     public static ThingDef SelectChunkFromAvailableOptions()
     {
-        if (ShipChunkDrop_TranspilerMod.instance.Settings.SmallChunksAlso)
+        if (ShipChunkDrop_TranspilerMod.Instance.Settings.SmallChunksAlso)
         {
             return (from defs in DefDatabase<ThingDef>.AllDefs
                 where defs.defName.StartsWith("ShipChunk") && !defs.defName.Contains("Incoming")
