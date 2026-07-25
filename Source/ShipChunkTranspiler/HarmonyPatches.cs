@@ -20,20 +20,15 @@ internal static class HarmonyPatches
     public static IEnumerable<CodeInstruction> IncidentWorker_ShipChunkDrop_SpawnChunk_Transpiler(
         IEnumerable<CodeInstruction> instructions)
     {
+        var targetField = AccessTools.Field(typeof(ThingDefOf), nameof(ThingDefOf.ShipChunk));
         var chunkSelector = AccessTools.Method(typeof(HarmonyPatches), nameof(SelectChunkFromAvailableOptions));
-        var i = 0;
+
         foreach (var codeInstruction in instructions)
         {
-            if (codeInstruction.opcode == OpCodes.Ldsfld)
+            if (codeInstruction.LoadsField(targetField))
             {
-                if (i == 1)
-                {
-                    codeInstruction.opcode = OpCodes.Call;
-                    codeInstruction.operand = chunkSelector;
-                }
-
-                var num = i;
-                i = num + 1;
+                codeInstruction.opcode = OpCodes.Call;
+                codeInstruction.operand = chunkSelector;
             }
 
             yield return codeInstruction;
