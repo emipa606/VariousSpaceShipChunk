@@ -3,4 +3,16 @@
     <BuildType Name="Release" />
   </Configurations>
   <Project Path="ShipChunkTranspiler/ShipChunkTranspiler.csproj" />
+  <Folder Name="/.github/">
+    <File Path="../.github/copilot-instructions.md" />
+  </Folder>
+  <Folder Name="/XML/About/">
+    <File Path="../About/about.xml" />
+  </Folder>
+  <Folder Name="/XML/Defs/ThingDefs_Buildings/">
+    <File Path="../Defs/ThingDefs_Buildings/Buildings_Exotic.xml" />
+  </Folder>
+  <Folder Name="/XML/Languages/English/Keyed/">
+    <File Path="../Languages/English/Keyed/Misc.xml" />
+  </Folder>
 </Solution>

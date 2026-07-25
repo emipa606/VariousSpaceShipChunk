@@ -15,11 +15,6 @@ internal class ShipChunkDrop_TranspilerMod : Mod
     private static string currentVersion;
 
     /// <summary>
-    ///     The private settings
-    /// </summary>
-    private ShipChunkDrop_TranspilerSettings settings;
-
-    /// <summary>
     ///     Cunstructor
     /// </summary>
     /// <param name="content"></param>
@@ -37,9 +32,9 @@ internal class ShipChunkDrop_TranspilerMod : Mod
     {
         get
         {
-            settings ??= GetSettings<ShipChunkDrop_TranspilerSettings>();
+            field ??= GetSettings<ShipChunkDrop_TranspilerSettings>();
 
-            return settings;
+            return field;
         }
     }
 

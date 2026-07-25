@@ -1,5 +1,8 @@
 # Changelog for VariousSpaceShipChunk
 
+1.6.2 - More resilient transpiler, thanks Spagles
+
+
 1.6.1 - Fixed wrong author name
 
 
