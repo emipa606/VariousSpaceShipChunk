@@ -51,11 +51,11 @@ internal class ShipChunkDrop_TranspilerMod : Mod
     ///     The settings-window
     ///     For more info: https://rimworldwiki.com/wiki/Modding_Tutorials/ModSettings
     /// </summary>
-    /// <param name="rect"></param>
-    public override void DoSettingsWindowContents(Rect rect)
+    /// <param name="inRect"></param>
+    public override void DoSettingsWindowContents(Rect inRect)
     {
         var listing_Standard = new Listing_Standard();
-        listing_Standard.Begin(rect);
+        listing_Standard.Begin(inRect);
         listing_Standard.CheckboxLabeled("VSSC.SmallChunksAlso".Translate(), ref Settings.SmallChunksAlso,
             "VSSC.SmallChunksAlso.Tooltip".Translate());
         if (currentVersion != null)

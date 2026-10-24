@@ -1,45 +1,72 @@
-# GitHub Copilot Instructions for Various Space Ship Chunk (Continued)
+# GitHub Copilot Instructions for Various Space Ship Chunk (Continued) Mod
 
 ## Mod Overview and Purpose
-
-The "Various Space Ship Chunk (Continued)" mod enhances the gameplay experience of RimWorld by introducing new types of ship chunks that can drop during ship chunk drop events. This mod is a continuation of the original mod by totobrother, updated to include a chunk that provides uranium, and an option to spawn smaller chunks. The mod is designed to be compatible with any other mods and can be added to any existing save file without issues, thanks to the robust code developed by Mehni.
+The Various Space Ship Chunk (Continued) mod is an update to the original Various Space Ship Chunk mod. It adds new ship chunks to the game, including a chunk that provides uranium. Users have the option to spawn smaller chunks as well. The mod aims to enhance the loot system by adding diverse ship chunks that can drop during gameplay. It is compatible with any mod and can be integrated into any save file.
 
 ## Key Features and Systems
-
-- **New Ship Chunks**: Introduces various types of ship chunks, including those containing uranium.
-- **Customizable Spawns**: Provides an option to spawn smaller chunks, adding variability to gameplay.
-- **Compatibility**: Works seamlessly with any mod and can be integrated into existing save files.
-- **Art and Design**: Features artwork by yionguon, adding a unique visual element to the game.
+- **Uranium Chunk**: A new chunk that provides uranium, adding a valuable resource to the game.
+- **Smaller Chunk Option**: Allows players to spawn smaller chunks, increasing the variety of loot.
+- **Compatibility**: Works with any mod, ensuring broad applicability.
+- **Loot System Enhancement**: Introduces new ship chunks that can drop during gameplay, enriching the experience.
 
 ## Coding Patterns and Conventions
-
-- **Consistent Naming**: Use PascalCase for class names and camelCase for method names and variables.
-- **Structured Code**: Organize code into separate files for different functionalities (e.g., settings, transpilers).
-- **Comments and Documentation**: Include clear comments and XML documentation for methods and classes to enhance readability and maintainability.
+- **C# Files**: The mod is written in C# and follows common RimWorld modding conventions.
+  - **HarmonyPatches.cs**: Contains harmony patches for modifying the game's behavior.
+  - **ShipChunkDrop_TranspilerMod.cs**: Manages the mod's settings and configuration.
+  - **ShipChunkDrop_TranspilerSettings.cs**: Handles the mod's settings, including saving and loading data.
+- **XML Files**: XML files are used to define game objects and their properties.
+  - **Buildings_Exotic.xml**: Defines the new ship chunks.
 
 ## XML Integration
+The XML integration is crucial for defining the new ship chunks. The `Buildings_Exotic.xml` file contains the definitions for these chunks, including their properties and resources.
 
-The mod uses XML files to define new thing definitions and other game data:
+xml
+<ThingDef ParentName="Base_ShipChunk" Name="VariousSpaceShipChunk_UraniumChunk" defName="VariousSpaceShipChunk_UraniumChunk">
+    <label>Uranium Chunk</label>
+    <description>A chunk of uranium found in the wreckage of an alien ship.</description>
+    <defStuffCategories>
+        <li>Mineral</li>
+    </defStuffCategories>
+    <thingCategories>
+        <li>Building</li>
+    </thingCategories>
+    <marketValue>500</marketValue>
+    <stackLimit>100</stackLimit>
+    <graphicData>
+        <texPath>VariousSpaceShipChunk/UraniumChunk</texPath>
+        <drawSize>2</drawSize>
+    </graphicData>
+</ThingDef>
 
-- **Thing Definitions**: Located in `DefInjected/ThingDef/Buildings_Exotic.xml`, define the properties of the new ship chunks.
-- **Translation Templates**: Located in `TranslationTemplate/ThingDef/Buildings_Exotic.xml`, support for localization and mod translation.
 
 ## Harmony Patching
+Harmony patching is used to modify the game's behavior without altering the original source code. The `HarmonyPatches.cs` file contains the patches for adding the new ship chunks to the game.
 
-Harmony is used to alter existing game behavior without changing the core game files:
+csharp
+[HarmonyPatch(typeof(IncidentWorker_ShipChunkDrop))]
+[HarmonyPatch("SpawnChunk")]
+public static class IncidentWorker_ShipChunkDrop_SpawnChunk_Patch
+{
+    public static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions)
+    {
+        var codes = instructions.ToList();
+        var index = codes.FindIndex(code => code.opcode == OpCodes.Ldc_I4_1);
+        if (index != -1)
+        {
+            codes[index].operand = 2; // Change the value to 2 to spawn smaller chunks
+        }
+        return codes;
+    }
+}
 
-- **Transpiler Patches**: Implemented in `ShipChunkDrop_TranspilerMod.cs` and `HarmonyPatches.cs` to selectively modify the game logic involved in ship chunk drops.
-- **Custom Methods**: Specific methods like `IncidentWorker_ShipChunkDrop_SpawnChunk_Transpiler` are used to customize the chunk spawning logic.
 
 ## Suggestions for Copilot
+- **XML Definitions**: When generating XML files, ensure they are structured correctly and follow RimWorld's XML conventions.
+- **Harmony Patches**: When creating harmony patches, be cautious with modifying existing code and ensure that the patches do not break the game.
+- **Settings Management**: When managing settings, ensure that data is correctly exposed and saved, and that the settings interface is user-friendly.
+- **Compatibility**: When adding new features, ensure that the mod remains compatible with other mods and that there are no conflicts.
 
-1. **Code Completion**: Write method implementations by suggesting structured code blocks based on the surrounding code context.
-2. **XML Suggestions**: Provide suggestions for XML element completions to maintain consistent data definitions.
-3. **Harmony Patch Assistance**: Assist in creating well-formed transpiler methods or prefix/postfix patches.
-4. **Debugging Support**: Suggest common troubleshooting steps based on known issues in mod development.
-5. **Automated Testing**: Propose simple testing cases to ensure mod features work as expected following implementation changes.
-
-By adhering to these guidelines and leveraging GitHub Copilot, developers can maintain high-quality code and reliable mod functionality.
+By following these guidelines, you can effectively use GitHub Copilot to enhance your modding experience and create high-quality RimWorld mods.
 
 ## Project Solution Guidelines
 - Relevant mod XML files are included as Solution Items under the solution folder named XML, these can be read and modified from within the solution.
@@ -53,4 +80,6 @@ By adhering to these guidelines and leveraging GitHub Copilot, developers can ma
 ## Hard rules (must follow)
 - Do NOT run commands that modify the repo (no git commit, git apply, dotnet format) unless explicitly asked.
 - Prefer minimal reads: read only the smallest code region needed (around the suspicious lines).
+- When mentioning SonarQube issues, automatically use the SonarQube MCP service to fetch and address issues instead of making inferred fixes without querying SonarQube first.
+- When mentioning the rimworld log, automatically use the Rimworld MCP service to fetch the log.
 
